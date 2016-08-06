@@ -19,9 +19,9 @@ function watchPyramidFromTheSide(characters){
 	}
 	for (i = 0; i < resultArray.length; i++) {
 		for (j = 0; j < span; j++) {
-			resultString = (j<span) ? resultString + resultArray[i][j] : (resultString[i][j] !== " ") ? resultString + resultArray[i][j] : resultString;
+			resultString += resultArray[i][j];
 		}
-		resultString += "\n";
+		if (i < span - 1) {resultString += "\n";}
 	}
 	return resultString;
 }
